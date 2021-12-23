@@ -1,4 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:appcenter/appcenter.dart';
+import 'package:appcenter_analytics/appcenter_analytics.dart';
+import 'package:appcenter_crashes/appcenter_crashes.dart';
+
+void initAppCenter() async {
+  var appSecret = "04010d4a-591f-4ced-9a06-1d4a4e4683bd";
+
+  await AppCenter.start(
+      appSecret, [AppCenterAnalytics.id, AppCenterCrashes.id]);
+}
 
 void main() {
   runApp(const MyApp());
