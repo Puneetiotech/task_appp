@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:appcenter/appcenter.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:appcenter_analytics/appcenter_analytics.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:appcenter_crashes/appcenter_crashes.dart';
 
 void initAppCenter() async {
