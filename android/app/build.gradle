@@ -57,10 +57,15 @@ android {
     }
     signingConfigs {
         release {
-            keyAlias keystoreProperties['keyAlias']
-            keyPassword keystoreProperties['keyPassword']
-            storeFile file("key.jks")
-            storePassword keystoreProperties['storePassword']
+            // keyAlias keystoreProperties['keyAlias']
+            // keyPassword keystoreProperties['keyPassword']
+            // storeFile file("key.jks")
+            // storePassword keystoreProperties['storePassword']
+
+            storeFile rootProject.file("task_appp/android/key.jks")
+            storePassword System.getProperty("APPCENTER_KEYSTORE_PASSWORD")
+            keyAlias System.getProperty("APPCENTER_KEY_ALIAS")
+            keyPassword System.getProperty("APPCENTER_KEY_PASSWORD")
      }
     }
 
