@@ -7,6 +7,8 @@ import 'package:appcenter_analytics/appcenter_analytics.dart';
 import 'package:appcenter_crashes/appcenter_crashes.dart';
 import 'package:logger/logger.dart';
 
+int count = 0;
+
 void initAppCenter() async {
   var appSecret = "04010d4a-591f-4ced-9a06-1d4a4e4683bd";
 
@@ -18,11 +20,12 @@ void initalSetup() {
   const env = String.fromEnvironment('env', defaultValue: 'dev');
   var logger = Logger();
   if (env == "dev") {
-    // to show dialogue..'
     logger.d("This is dev branch running");
+    count = count + 1;
   } else if (env == "qa") {
     // to show dialogue...
     logger.d("This is qa branch running");
+    count = count + 2;
   }
 }
 
@@ -92,6 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            if (count == 1) devButton else if (count == 2) qabutton
           ],
         ),
       ),
@@ -103,3 +107,16 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+Widget devButton = ElevatedButton(
+  onPressed: () {},
+  child: const Text(
+    'This is dev',
+  ),
+);
+Widget qabutton = ElevatedButton(
+  onPressed: () {},
+  child: const Text(
+    'This is qa',
+  ),
+);
