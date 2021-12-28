@@ -17,7 +17,7 @@ void initAppCenter() async {
 }
 
 void initalSetup() {
-  const env = String.fromEnvironment('env', defaultValue: 'dev');
+  const env = String.fromEnvironment('env', defaultValue: 'qa');
   var logger = Logger();
   if (env == "dev") {
     logger.d("This is dev branch running");
