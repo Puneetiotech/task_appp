@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:appcenter/appcenter.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:appcenter_analytics/appcenter_analytics.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:appcenter_crashes/appcenter_crashes.dart';
 import 'package:logger/logger.dart';
 
 int count = 0;
 
-void initAppCenter() async {
-  var appSecret = "04010d4a-591f-4ced-9a06-1d4a4e4683bd";
+// void initAppCenter() async {
+//   var appSecret = "04010d4a-591f-4ced-9a06-1d4a4e4683bd";
 
-  await AppCenter.start(
-      appSecret, [AppCenterAnalytics.id, AppCenterCrashes.id]);
-}
+//   await AppCenter.start(
+//       appSecret, [AppCenterAnalytics.id, AppCenterCrashes.id]);
+// }
 
 void initalSetup() {
   const env = String.fromEnvironment('env', defaultValue: 'dev');
