@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo for CICD',
+      title: 'Flutter Demo for CICD -checking build is working or not',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
